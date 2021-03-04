@@ -1,11 +1,7 @@
-import { useState } from 'react'
+import styles from '../styles/About.module.css'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 
-export default function Home() {
-    const [sideMenuToggle, setSideMenuToggle] = useState(true)
-    const [page, setPage] = useState('home')
-
+export default function About() {
     return (
         <div className={styles.container}>
             <Head>
@@ -20,7 +16,7 @@ export default function Home() {
 
             <main className={styles.main}>
                 <div>
-                    <h1>MAIN HOME</h1>
+                    <h1>MAIN ABOUT</h1>
                 </div>
             </main>
         </div>

@@ -1,0 +1,133 @@
+@keyframes appearing {
+    0% {
+        width: 50px;
+    }
+    100% {
+        width: 300px;
+    }
+}
+
+@keyframes logoAppear {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    7% {
+        opacity: 0;
+    }
+    9% {
+        opacity: 1;
+    }
+    11% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(400deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes vibratingArrow {
+    0% {
+        transform: translate(0px) rotate(180deg);
+    }
+    33% {
+        transform: translate(-2px) rotate(180deg);
+    }
+    66% {
+        transform: translate(2px) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(0px) rotate(180deg);
+    }
+}
+
+@keyframes disappearing {
+    0% {
+        width: 300px;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.sideMenuOpen {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    background: black;
+    color: aliceblue;
+    animation: appearing 0.3s ease-in;
+}
+
+.sideMenuClose {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50px;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    background: black;
+    color: aliceblue;
+    animation: disappearing 0.3s ease-in;
+}
+
+.sideMenuOpen ul {
+    list-style: none;
+}
+
+.mswLogo {
+    width: 100%;
+    animation: logoAppear 1s ease-in;
+}
+
+.arrow {
+    width: 50px;
+    margin-left: auto;
+    transform: rotate(180deg);
+}
+
+.arrow:hover {
+    animation: vibratingArrow 0.2s linear infinite;
+}
+
+.cross {
+    width: 50px;
+    margin-left: auto;
+}
+
+.cross:hover {
+    animation: rotation 1.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
