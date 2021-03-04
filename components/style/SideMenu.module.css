@@ -1,3 +1,127 @@
+.sideMenuOpen {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    background: black;
+    color: aliceblue;
+    animation: appearing 0.2s ease-in;
+}
+
+.sideMenuClose {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    background: black;
+    color: aliceblue;
+    animation: disappearing 0.2s ease-in;
+}
+
+.sideMenuOpen ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.sideMenuClose ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.sideMenuOpen li {
+    margin-top: 30px;
+    margin-left: 80%;
+    padding: 20px;
+    justify-self: center;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: 0.5s ease-out;
+}
+
+.sideMenuClose li {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto auto auto -45px;
+    transition: 0.5s ease-out;
+}
+
+.sideMenuOpen li:hover {
+    cursor: pointer;
+    background-color: aliceblue;
+    color: black;
+    transition: 0.5s ease-out;
+}
+
+.sideMenuClose li:hover {
+    cursor: pointer;
+    background-color: #00ffff49;
+    transition: 0.5s ease-out;
+}
+
+.mswLogo {
+    width: 100%;
+    animation: logoAppear 1.5s ease-out;
+}
+
+.arrow {
+    width: 50px;
+    margin-left: auto;
+    transform: rotate(180deg);
+}
+
+.arrow:hover {
+    animation: vibratingArrow 0.2s linear infinite;
+}
+
+.cross {
+    margin-top: 20px;
+    width: 50px;
+    margin-left: auto;
+}
+
+.cross:hover {
+    animation: rotation 1.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+.social {
+    display: flex;
+    margin: auto auto 0px auto;
+    width: 120px;
+    transition: 1s ease-out;
+}
+
+.socialClose {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto 0px auto;
+    width: 60px;
+    transition: 1s ease-out;
+}
+
+.socialLink {
+    width: 60px;
+    height: 60px;
+    transition: 0.5s ease-out;
+}
+
+.socialLink:hover {
+    background-color: #00ffff49;
+    transition: 0.5s ease-out;
+}
+
 @keyframes appearing {
     0% {
         width: 50px;
@@ -10,28 +134,9 @@
 @keyframes logoAppear {
     0% {
         opacity: 0;
+        transform: translate(100px);
     }
-    5% {
-        opacity: 1;
-    }
-    7% {
-        opacity: 0;
-    }
-    9% {
-        opacity: 1;
-    }
-    11% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 0;
-    }
-    95% {
-        opacity: 0;
-    }
+
     100% {
         opacity: 1;
     }
@@ -72,62 +177,4 @@
     100% {
         width: 50px;
     }
-}
-
-.sideMenuOpen {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 300px;
-    position: fixed;
-    z-index: 1;
-    overflow-x: hidden;
-    background: black;
-    color: aliceblue;
-    animation: appearing 0.3s ease-in;
-}
-
-.sideMenuClose {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 50px;
-    position: fixed;
-    z-index: 1;
-    overflow-x: hidden;
-    background: black;
-    color: aliceblue;
-    animation: disappearing 0.3s ease-in;
-}
-
-.sideMenuOpen ul {
-    list-style: none;
-}
-
-.mswLogo {
-    width: 100%;
-    animation: logoAppear 1s ease-in;
-}
-
-.arrow {
-    width: 50px;
-    margin-left: auto;
-    transform: rotate(180deg);
-}
-
-.arrow:hover {
-    animation: vibratingArrow 0.2s linear infinite;
-}
-
-.cross {
-    width: 50px;
-    margin-left: auto;
-}
-
-.cross:hover {
-    animation: rotation 1.5s ease-in-out;
-}
-
-.hidden {
-    display: none;
 }
