@@ -6,11 +6,45 @@
 }
 
 .main {
-    margin: auto;
+    display: flex;
+    margin: 0px;
     justify-content: center;
     align-items: center;
 }
 
+.pictle {
+    display: flex;
+    /* margin: 0 auto; */
+    width: 100%;
+    height: 600px;
+    color: aliceblue;
+    background: linear-gradient(
+            to bottom,
+            #ffffff00,
+            90%,
+            rgba(255, 255, 255, 1)
+        ),
+        url('../public/top_view-desktop.jpg') top / cover;
+}
+
+.pictle h1 {
+    margin: auto;
+    font-size: 100px;
+    text-align: center;
+    animation: appearText 3s ease-in-out;
+}
+
 .footer {
     color: black;
+}
+
+@keyframes appearText {
+    0% {
+        translate: -300px;
+        color: transparent;
+    }
+    100% {
+        translate: 0px;
+        color: aliceblue;
+    }
 }

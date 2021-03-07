@@ -21,7 +21,6 @@
     overflow-x: hidden;
     background: black;
     color: aliceblue;
-    animation: disappearing 0.2s ease-in;
 }
 
 .sideMenuOpen ul {
@@ -29,21 +28,20 @@
     flex-direction: column;
     align-items: center;
     list-style: none;
+    padding: 0px;
 }
 
 .sideMenuClose ul {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    justify-items: center;
     list-style: none;
 }
 
 .sideMenuOpen li {
-    margin-top: 30px;
-    margin-left: 80%;
-    padding: 20px;
+    padding: 10px 100% 10px 100%;
     justify-self: center;
-    transform-origin: center;
-    transform: rotate(-90deg);
     transition: 0.5s ease-out;
 }
 
@@ -51,13 +49,13 @@
     padding-left: 10px;
     padding-right: 10px;
     margin: auto auto auto -45px;
-    transition: 0.5s ease-out;
+    transition: 0.2s ease-out;
 }
 
 .sideMenuOpen li:hover {
     cursor: pointer;
-    background-color: aliceblue;
-    color: black;
+    background-color: #00ffff49;
+    color: aliceblue;
     transition: 0.5s ease-out;
 }
 
@@ -68,13 +66,12 @@
 }
 
 .mswLogo {
-    width: 100%;
     animation: logoAppear 1.5s ease-out;
 }
 
 .arrow {
     width: 50px;
-    margin-left: auto;
+    margin: auto;
     transform: rotate(180deg);
 }
 
@@ -120,6 +117,36 @@
 .socialLink:hover {
     background-color: #00ffff49;
     transition: 0.5s ease-out;
+}
+
+@media screen and (max-height: 750px) {
+    .mswLogo {
+        width: 90%;
+        height: 50%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .mswLogo {
+        margin: auto;
+        width: 50%;
+    }
+}
+
+@media screen and (max-height: 560px) {
+    .mswLogo {
+        display: none;
+    }
+    .sideMenuClose li {
+        width: 25px;
+        height: 40px;
+    }
+    .socialLink {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
 }
 
 @keyframes appearing {

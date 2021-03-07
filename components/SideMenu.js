@@ -2,9 +2,14 @@ import { useState } from 'react'
 import styles from './style/SideMenu.module.css'
 import Link from 'next/link'
 export default function SideMenu() {
-    const [toggleMenu, setToggleMenu] = useState(true)
+    const [toggleMenu, setToggleMenu] = useState(false)
+    const [activeLink, setActiveLink] = useState('home')
     const toggle = () => {
         setToggleMenu(!toggleMenu)
+    }
+
+    const handleActivePage = (link) => {
+        setActiveLink(link)
     }
     return (
         <div
@@ -12,7 +17,7 @@ export default function SideMenu() {
         >
             <ul>
                 <Link href="/">
-                    <li>
+                    <li onClick={() => setActiveLink('home')}>
                         {toggleMenu ? (
                             'Home'
                         ) : (
@@ -25,7 +30,7 @@ export default function SideMenu() {
                     </li>
                 </Link>
                 <Link href="/about">
-                    <li>
+                    <li onClick={() => setActiveLink('about')}>
                         {toggleMenu ? (
                             'About'
                         ) : (
@@ -38,7 +43,7 @@ export default function SideMenu() {
                     </li>
                 </Link>
                 <Link href="/contact">
-                    <li>
+                    <li onClick={() => setActiveLink('contact')}>
                         {toggleMenu ? (
                             'Contact'
                         ) : (
@@ -52,6 +57,11 @@ export default function SideMenu() {
                 </Link>
             </ul>
             <img
+                className={toggleMenu ? styles.mswLogo : styles.hidden}
+                src="/MSW_anim.gif"
+                alt="msw représentation"
+            />
+            <img
                 onClick={toggle}
                 className={!toggleMenu ? styles.arrow : styles.hidden}
                 src="/arrowWhite.png"
@@ -62,11 +72,6 @@ export default function SideMenu() {
                 className={toggleMenu ? styles.cross : styles.hidden}
                 src="/crossWhite.png"
                 alt="white cross"
-            />
-            <img
-                className={toggleMenu ? styles.mswLogo : styles.hidden}
-                src="/mswFullWhite.png"
-                alt="msw représentation"
             />
             <div className={toggleMenu ? styles.social : styles.socialClose}>
                 <a
