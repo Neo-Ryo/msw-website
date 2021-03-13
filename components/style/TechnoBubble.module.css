@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid aliceblue;
+    color: aliceblue;
+    transition: 0.2s;
+}
+
+.wrapper:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid red;
+    transition: 0.2s;
+}
+
+.wrapper img {
+    width: 50%;
+    margin: auto;
+}
+
+.wrapper p {
+    margin: 10px;
+}

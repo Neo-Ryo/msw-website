@@ -1,0 +1,48 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: center;
+    width: 250px;
+    height: 300px;
+    border-radius: 2px;
+    box-shadow: 5px 5px 5px grey;
+    border-bottom: 5px solid black;
+    background: rgba(163, 163, 163, 0.164);
+    background: linear-gradient(
+        193deg,
+        rgba(237, 237, 237, 0.801) 0%,
+        rgba(175, 175, 175, 0.103) 35%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    animation: slideIn 1.5s;
+    transition: 0.1s;
+}
+.wrapper img {
+    height: 50%;
+    margin: auto;
+}
+
+.wrapper p {
+    margin: 10px 10px 30px 10px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.wrapper:hover {
+    border-bottom: 5px solid #fd0000;
+    transition: 0.1s;
+    transform: scale(1.1);
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translate(0px, -200px);
+    }
+    100% {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
