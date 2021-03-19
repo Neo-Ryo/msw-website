@@ -22,7 +22,7 @@ export default function SideMenu() {
                             'Home'
                         ) : (
                             <img
-                                src="/homeWhite.png"
+                                src="/icon/homeWhite.png"
                                 alt="home icon"
                                 width="50px"
                             />
@@ -35,7 +35,7 @@ export default function SideMenu() {
                             'About'
                         ) : (
                             <img
-                                src="/infoWhite.png"
+                                src="/icon/infoWhite.png"
                                 alt="info icon"
                                 width="50px"
                             />
@@ -48,7 +48,7 @@ export default function SideMenu() {
                             'Contact'
                         ) : (
                             <img
-                                src="/emailWhite.png"
+                                src="/icon/emailWhite.png"
                                 alt="email icon"
                                 width="50px"
                             />
@@ -64,13 +64,13 @@ export default function SideMenu() {
             <img
                 onClick={toggle}
                 className={!toggleMenu ? styles.arrow : styles.hidden}
-                src="/arrowWhite.png"
+                src="/icon/arrowWhite.png"
                 alt="white arrow"
             />
             <img
                 onClick={toggle}
                 className={toggleMenu ? styles.cross : styles.hidden}
-                src="/crossWhite.png"
+                src="/icon/crossWhite.png"
                 alt="white cross"
             />
             <div className={toggleMenu ? styles.social : styles.socialClose}>
@@ -80,14 +80,14 @@ export default function SideMenu() {
                 >
                     <img
                         className={styles.socialLink}
-                        src="/instaWhite.png"
+                        src="/social/instaWhite.png"
                         alt="white instagram"
                     />
                 </a>
                 <a href="https://github.com/Neo-Ryo" target="_blank">
                     <img
                         className={styles.socialLink}
-                        src="/githubWhite.png"
+                        src="/social/githubWhite.png"
                         alt="white github"
                     />
                 </a>
