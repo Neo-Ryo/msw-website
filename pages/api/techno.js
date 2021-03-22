@@ -20,9 +20,14 @@ const technoData = [
         text: 'Framework css très design.',
     },
     {
-        icon: '/technos/nodeJSNude.png',
+        icon: '/technos/nodeJS.png',
         desc: 'node js',
         text: 'Plateform de logiciel écrite en Javascript et orientée réseau.',
+    },
+    {
+        icon: '/technos/wixLogo.png',
+        desc: 'wix',
+        text: 'Wix.com est CMS très intuitif et facil à prendre en main.',
     },
 ]
 

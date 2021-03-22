@@ -29,7 +29,7 @@ export default function SideMenu() {
                         )}
                     </li>
                 </Link>
-                <Link href="/about">
+                <Link href="/portfolio">
                     <li onClick={() => setActiveLink('about')}>
                         {toggleMenu ? (
                             'About'
@@ -74,6 +74,16 @@ export default function SideMenu() {
                 alt="white cross"
             />
             <div className={toggleMenu ? styles.social : styles.socialClose}>
+                <a
+                    href="https://www.linkedin.com/in/marc-schiavone/"
+                    target="_blank"
+                >
+                    <img
+                        className={styles.socialLink}
+                        src="/social/linkedinWhite.png"
+                        alt="white instagram"
+                    />
+                </a>
                 <a
                     href="https://www.instagram.com/marco_web_services/?hl=fr"
                     target="_blank"

@@ -65,6 +65,7 @@
     align-items: center;
     height: 1200px;
     width: 100vw;
+    font-style: italic;
     background: center / cover url('../public/picture/laptop-dark.jpg');
     background-attachment: fixed;
 }
@@ -112,8 +113,50 @@
     color: aliceblue;
 }
 
-.footer {
-    color: black;
+.actionCall {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.actionCall h3 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.textButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.buttonWrapper {
+    max-width: 250px;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, red, purple);
+    padding: 3px;
+}
+
+.buttonInner {
+    padding: 5px 15px;
+    font-size: 22px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to top, #ff0101, #0044ff);
+    background: -webkit-linear-gradient(#ff0101, #0044ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.2s;
+}
+
+.buttonInner:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.2s;
 }
 
 @keyframes appearText {

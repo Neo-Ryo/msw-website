@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 import PrestaCard from '../components/PrestaCard'
 
 export async function getStaticProps() {
@@ -20,6 +21,26 @@ export async function getStaticProps() {
 export default function Home({ dataPresta }) {
     const [sideMenuToggle, setSideMenuToggle] = useState(true)
     const [page, setPage] = useState('home')
+    const [switchImage, setSwitchImage] = useState('/luxurycar-screened.png')
+
+    let images = [
+        '/luxurycar-screened.png',
+        '/screened-damien.png',
+        '/exya-screened.png',
+    ]
+
+    let index = 0
+    function change() {
+        index > 1 ? (index = 0) : index++
+        setSwitchImage(images[index])
+    }
+
+    useEffect(() => {
+        setInterval(change, 5000)
+        // return () => {
+        //     cleanup
+        // }
+    }, [])
 
     return (
         <div className={styles.container}>
@@ -29,7 +50,7 @@ export default function Home({ dataPresta }) {
                 <meta name="Content-Language" content="fr" />
                 <meta
                     name="Description"
-                    content="MSW est une société de création de contenu web et application mobile. Réaliser des sites à partir de maquettes pré établies suite à un ou plusieurs rendez-vous et respecter les envies du client."
+                    content="MSW est une micro-entreprise de création de contenu web et application mobile. Réaliser des sites à partir de maquettes pré établies suite à un ou plusieurs rendez-vous et respecter les envies du client."
                 />
                 <meta
                     name="Keywords"
@@ -48,7 +69,7 @@ export default function Home({ dataPresta }) {
                 <link rel="icon" href="/5_XdG_icon.ico" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&family=Spartan:wght@300;400;700&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,900&family=Spartan:wght@300;400;700&display=swap"
                     rel="stylesheet"
                 />
             </Head>
@@ -88,6 +109,21 @@ export default function Home({ dataPresta }) {
                     </div>
                     <div className={styles.stepThree}>
                         <p>Présentation du produit fini.</p>
+                    </div>
+                </div>
+                <div className={styles.actionCall}>
+                    <div className={styles.screen}>
+                        <img src={switchImage} alt="screen with web site" />
+                    </div>
+                    <div className={styles.textButton}>
+                        <h3>
+                            Votre site web n'attend que vous et va booster votre
+                            visibilité sur internet grâce au référencement
+                            naturel (SEO)!
+                        </h3>
+                        <Link href="/contact">
+                            <span className={styles.buttonInner}>contact</span>
+                        </Link>
                     </div>
                 </div>
             </main>

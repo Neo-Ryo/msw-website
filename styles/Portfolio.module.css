@@ -1,10 +1,3 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-width: 100vw;
-}
-
 .main {
     display: flex;
     flex-direction: column;
@@ -13,39 +6,36 @@
     align-items: center;
 }
 
+.mainActivity {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    background: bottom / cover url('../public/picture/life-begin.jpg');
+}
+
 .technos {
     width: 100vw;
     height: 600px;
     margin: 0px;
-    background: center / cover url('../public/technos/work-space.jpg');
-    background-attachment: fixed;
 }
 .blur {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.699);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     height: 100%;
     width: 100%;
     padding: 100px;
 }
 
 .blur h3 {
-    color: aliceblue;
+    color: rgb(51, 51, 51);
     font-size: 30px;
     margin: 0;
-    position: relative;
-    top: -100px;
+
     text-align: center;
 }
 
 .techBubbles {
     display: flex;
-}
-
-.footer {
-    color: black;
 }
