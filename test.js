@@ -1,17 +1,13 @@
-function digital_root(n) {
-    let num
-    while (num !== 'undefined' ? num.length > 1 : true) {
-        const str = num.toString().split('')
-        console.log(str.length)
-        const numArr = str.map((s) => parseInt(s))
-        console.log(numArr)
-        num = numArr.reduce((a, b) => a + b, 0)
-        console.log('new num: ', num)
-        // console.log(num)
-    }
-
-    return num
-    //console.log(numArr)
+function order(words) {
+    // let arr = words.split(' ')
+    // for(let i =0; i<arr.length;i++){
+    //     const arrWord = arr[i].split('')
+    // }
+    // return
 }
 
-console.log(digital_root(127))
+console.log(parseInt('a'))
+console.log(Number.isInteger('1'))
+
+// const final_test = 'worl2d Hel1lo you5 h3ow are4 '
+// console.log(order(final_test))

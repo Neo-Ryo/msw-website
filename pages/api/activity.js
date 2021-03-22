@@ -1,27 +1,27 @@
 const activityData = [
     {
-        icon: '/icon/designWhite.png',
+        icon: '/icon/conception.png',
         desc: 'design',
         text: 'Conception',
         color: 'aliceblue',
     },
     {
-        icon: '/presta/concept.png',
+        icon: '/icon/developpement.png',
         desc: 'concept',
         text: 'Développement',
-        color: 'blue',
+        color: '#ef3c86',
     },
     {
-        icon: '/icon/creationLogo.png',
+        icon: '/presta/concept.png',
         desc: 'creation developpement',
         text: 'Réferrencement',
-        color: 'green',
+        color: '#0050aa',
     },
     {
         icon: '/icon/dev.png',
         desc: 'statistique icon',
         text: 'Maintenance',
-        color: 'red',
+        color: '#00979c',
     },
 ]
 

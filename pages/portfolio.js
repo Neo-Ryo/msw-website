@@ -1,6 +1,7 @@
 import styles from '../styles/Portfolio.module.css'
 import Head from 'next/head'
 import Activity from '../components/Activity'
+import Project from '../components/Project'
 import TechnoBubble from '../components/TechoBubble'
 
 export async function getStaticProps() {
@@ -55,10 +56,19 @@ export default function Portfolio({ dataTech, dataAct }) {
             </Head>
 
             <main className={styles.main}>
-                <h1 style={{ marginBottom: 5 }}>PORTFOLIO</h1>
-                <p style={{ color: 'grey', fontSize: '24px', marginTop: 0 }}>
-                    Réalisations et compétences
-                </p>
+                <div className={styles.title}>
+                    <h1 style={{ marginBottom: 5 }}>PORTFOLIO</h1>
+                    <p
+                        style={{
+                            color: 'grey',
+                            fontSize: '24px',
+                            marginTop: 0,
+                        }}
+                    >
+                        Réalisations et compétences
+                    </p>
+                </div>
+                <h2 className={styles.activityTitle}>Activitées principales</h2>
                 <div className={styles.mainActivity}>
                     {dataAct.map((act, i) => (
                         <Activity
@@ -66,9 +76,13 @@ export default function Portfolio({ dataTech, dataAct }) {
                             icon={act.icon}
                             desc={act.desc}
                             text={act.text}
-                            color={act.color}
+                            colorText={act.color}
                         />
                     ))}
+                </div>
+                <div className={styles.project}>
+                    <h3>Mes projets</h3>
+                    <Project />
                 </div>
                 <div className={styles.technos}>
                     <div className={styles.blur}>
