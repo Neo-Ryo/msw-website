@@ -1,15 +1,14 @@
 import styles from './style/Project.module.css'
 
-export default function Projects() {
+export default function Projects({ image, title, desc, link, action }) {
     return (
         <div className={styles.wrapper}>
-            <iframe
-                id="inlineFrameExample"
-                title="Inline Frame Example"
-                width="300"
-                height="200"
-                src="https://www.exya-conciergerie.com"
-            ></iframe>
+            <a href={link} target="_blank">
+                <img className={styles.img} src={image} alt={title} />
+            </a>
+            <h4 className={styles.title}>{title}</h4>
+            <p className={styles.desc}>{desc}</p>
+            <p className={styles.action}>{action}</p>
         </div>
     )
 }

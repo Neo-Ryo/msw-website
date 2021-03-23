@@ -1,4 +1,44 @@
 .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.4),
+        -5px -5px 10px rgba(128, 128, 128, 0.4);
+    transition: 0.5s;
+}
+
+.wrapper:hover {
+    transform: scale(1.05, 1.05);
+    filter: hue-rotate(90deg);
+    transition: 0.5s;
+}
+
+.img {
+    width: 400px;
+    border-radius: 5px;
+}
+
+.title {
+    margin-left: 10px;
+    color: #e93b84;
+}
+
+.desc {
+    width: 400px;
+    color: rgb(80, 80, 80);
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.action {
+    width: 400px;
+    background-color: #3bb8e9;
+    color: aliceblue;
+    margin-top: 0px;
+    padding: 10px 40px 30px 20px;
+    border-bottom-left-radius: 5px;
+    margin-bottom: 0px;
 }

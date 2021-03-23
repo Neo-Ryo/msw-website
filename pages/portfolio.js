@@ -11,18 +11,21 @@ export async function getStaticProps() {
     const resActivity = await fetch('http://localhost:3000/api/activity')
     const dataAct = await resActivity.json()
 
-    if (!dataTech || !dataAct) {
+    const resProject = await fetch('http://localhost:3000/api/project')
+    const dataProject = await resProject.json()
+
+    if (!dataTech || !dataAct || !dataProject) {
         return {
             notFound: true,
         }
     }
 
     return {
-        props: { dataTech, dataAct }, // will be passed to the page component as props
+        props: { dataTech, dataAct, dataProject }, // will be passed to the page component as props
     }
 }
 
-export default function Portfolio({ dataTech, dataAct }) {
+export default function Portfolio({ dataTech, dataAct, dataProject }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -80,9 +83,20 @@ export default function Portfolio({ dataTech, dataAct }) {
                         />
                     ))}
                 </div>
-                <div className={styles.project}>
-                    <h3>Mes projets</h3>
-                    <Project />
+                <div className={styles.projectWrapper}>
+                    <h3 className={styles.projectTitle}>Mes projets :</h3>
+                    <div className={styles.projects}>
+                        {dataProject.map((proj, i) => (
+                            <Project
+                                key={i}
+                                image={proj.image}
+                                title={proj.title}
+                                desc={proj.desc}
+                                link={proj.link}
+                                action={proj.action}
+                            />
+                        ))}
+                    </div>
                 </div>
                 <div className={styles.technos}>
                     <div className={styles.blur}>
