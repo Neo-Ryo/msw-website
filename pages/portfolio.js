@@ -3,15 +3,18 @@ import Head from 'next/head'
 import Activity from '../components/Activity'
 import Project from '../components/Project'
 import TechnoBubble from '../components/TechoBubble'
+import { local, distant } from '../url'
 
 export async function getStaticProps() {
-    const resTech = await fetch('http://localhost:3000/api/techno')
+    const url = process.env.NODE_ENV === 'development' ? local : distant
+
+    const resTech = await fetch(`${url}/api/techno`)
     const dataTech = await resTech.json()
 
-    const resActivity = await fetch('http://localhost:3000/api/activity')
+    const resActivity = await fetch(`${url}/api/activity`)
     const dataAct = await resActivity.json()
 
-    const resProject = await fetch('http://localhost:3000/api/project')
+    const resProject = await fetch(`${url}/api/project`)
     const dataProject = await resProject.json()
 
     if (!dataTech || !dataAct || !dataProject) {

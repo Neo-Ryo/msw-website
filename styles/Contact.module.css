@@ -7,10 +7,56 @@
 
 .main {
     margin: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.footer {
-    color: black;
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    border-radius: 10px;
+    font-weight: 700;
+    background: center / cover
+        url('../public/picture/laptop-iphone-contact.jpg');
+    width: 800px;
+    height: 1000px;
+}
+
+.input {
+    color: aliceblue;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.input label {
+    margin-bottom: 10px;
+}
+
+.input textarea {
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    height: 100px;
+    width: 100%;
+}
+
+.buttonSend {
+    width: 100px;
+    height: 40px;
+    color: aliceblue;
+    font-weight: 700;
+    background-color: transparent;
+    border: 2px solid aliceblue;
+}
+
+.buttonSend:hover {
+    background-color: aliceblue;
+    color: #cc22be;
+    border: none;
 }

@@ -3,9 +3,11 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import PrestaCard from '../components/PrestaCard'
+import { local, distant } from '../url'
 
 export async function getStaticProps() {
-    const resPresta = await fetch(`http://localhost:3000/api/presta`)
+    const url = process.env.NODE_ENV === 'development' ? local : distant
+    const resPresta = await fetch(`${url}/api/presta`)
     const dataPresta = await resPresta.json()
     if (!dataPresta) {
         return {
@@ -37,6 +39,7 @@ export default function Home({ dataPresta }) {
 
     useEffect(() => {
         setInterval(change, 5000)
+        console.log(process.env.NODE_ENV)
         // return () => {
         //     cleanup
         // }
