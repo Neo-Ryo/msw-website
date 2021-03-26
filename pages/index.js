@@ -39,7 +39,6 @@ export default function Home({ dataPresta }) {
 
     useEffect(() => {
         setInterval(change, 5000)
-        console.log(process.env.NODE_ENV)
         // return () => {
         //     cleanup
         // }

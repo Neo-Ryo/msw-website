@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import styles from '../styles/Contact.module.css'
 import Head from 'next/head'
 
 export default function Contact() {
+    const [isSend, setIsSend] = useState(true)
     return (
         <div className={styles.container}>
             <Head>
@@ -38,24 +40,35 @@ export default function Contact() {
                 <h1>CONTACT</h1>
                 <form className={styles.formulaire}>
                     <div className={styles.input}>
-                        <label for="name">Nom</label>
+                        <label htmlFor="name">Nom</label>
                         <input type="text" name="name" required />
                     </div>
                     <div className={styles.input}>
-                        <label for="email">eMail</label>
+                        <label htmlFor="email">eMail</label>
                         <input type="text" name="email" required />
                     </div>
                     <div className={styles.input}>
-                        <label for="message">Votre message</label>
+                        <label htmlFor="message">Votre message</label>
                         <textarea type="text" name="message" required />
+
                         <p>
                             Soyez le plus précis possible dans votre message
                             pour faciliter nos échanges à venir.
                         </p>
                     </div>
                     <button className={styles.buttonSend}>Envoyer</button>
+                    <p
+                        style={{ display: isSend ? '' : 'none' }}
+                        className={styles.successMessage}
+                    >
+                        Message envoyé! Je reviendrais vers vous rapidement :)
+                    </p>
 
-                    <img src="/full-black-logo.png" alt="msw web developper" />
+                    <img
+                        src="/msw-full-crop.png"
+                        alt="msw web developper"
+                        style={{ margin: 10 }}
+                    />
                 </form>
             </main>
         </div>

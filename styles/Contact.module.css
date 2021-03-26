@@ -24,7 +24,10 @@
     background: center / cover
         url('../public/picture/laptop-iphone-contact.jpg');
     width: 800px;
-    height: 1000px;
+    height: auto;
+    padding: 10px;
+    box-shadow: 5px 5px 15px rgba(104, 104, 104, 0.507),
+        -5px -5px 15px rgba(104, 104, 104, 0.507);
 }
 
 .input {
@@ -46,6 +49,14 @@
     width: 100%;
 }
 
+.input p {
+    font-weight: 400;
+    background-color: #cc22bed5;
+    border-radius: 5px;
+    padding: 5px;
+    /* color: yellowgreen; */
+}
+
 .buttonSend {
     width: 100px;
     height: 40px;
@@ -53,10 +64,28 @@
     font-weight: 700;
     background-color: transparent;
     border: 2px solid aliceblue;
+    transition: 0.3s;
 }
 
 .buttonSend:hover {
     background-color: aliceblue;
     color: #cc22be;
     border: none;
+    transition: 0.3s;
+}
+
+.buttonDone {
+    /* set button green with ckeckmark logo */
+}
+
+.successMessage {
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: 300;
+    background-color: #22cc3e;
+    text-align: center;
+    border-radius: 5px;
+    padding: 7px;
+    width: 250px;
+    margin: 5px;
 }
