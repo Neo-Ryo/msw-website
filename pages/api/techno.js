@@ -31,6 +31,4 @@ const technoData = [
     },
 ]
 
-export default (req, res) => {
-    res.status(200).json(technoData)
-}
+export default technoData

@@ -3,30 +3,9 @@ import Head from 'next/head'
 import Activity from '../components/Activity'
 import Project from '../components/Project'
 import TechnoBubble from '../components/TechoBubble'
-import { local, distant } from '../url'
-
-export async function getStaticProps() {
-    const url = process.env.NODE_ENV === 'development' ? local : distant
-
-    const resTech = await fetch(`${url}/api/techno`)
-    const dataTech = await resTech.json()
-
-    const resActivity = await fetch(`${url}/api/activity`)
-    const dataAct = await resActivity.json()
-
-    const resProject = await fetch(`${url}/api/project`)
-    const dataProject = await resProject.json()
-
-    if (!dataTech || !dataAct || !dataProject) {
-        return {
-            notFound: true,
-        }
-    }
-
-    return {
-        props: { dataTech, dataAct, dataProject }, // will be passed to the page component as props
-    }
-}
+import dataTech from './api/techno'
+import dataAct from './api/activity'
+import dataProject from './api/project'
 
 export default function Portfolio({ dataTech, dataAct, dataProject }) {
     return (
@@ -119,4 +98,10 @@ export default function Portfolio({ dataTech, dataAct, dataProject }) {
             </main>
         </div>
     )
+}
+
+export async function getStaticProps() {
+    return {
+        props: { dataTech, dataAct, dataProject },
+    }
 }

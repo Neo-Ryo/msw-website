@@ -18,6 +18,8 @@ const prestaData = [
     },
 ]
 
-export default (req, res) => {
-    res.status(200).json(prestaData)
-}
+export default prestaData
+
+// export default (req, res) => {
+//     res.status(200).json(prestaData)
+// }

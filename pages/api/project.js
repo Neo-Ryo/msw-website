@@ -24,6 +24,4 @@ const projectData = [
     },
 ]
 
-export default (req, res) => {
-    res.status(200).json(projectData)
-}
+export default projectData

@@ -3,22 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import PrestaCard from '../components/PrestaCard'
-import { local, distant } from '../url'
-
-export async function getStaticProps() {
-    const url = process.env.NODE_ENV === 'development' ? local : distant
-    const resPresta = await fetch(`${url}/api/presta`)
-    const dataPresta = await resPresta.json()
-    if (!dataPresta) {
-        return {
-            notFound: true,
-        }
-    }
-
-    return {
-        props: { dataPresta }, // will be passed to the page component as props
-    }
-}
+import dataPresta from './api/presta'
 
 export default function Home({ dataPresta }) {
     const [sideMenuToggle, setSideMenuToggle] = useState(true)
@@ -131,4 +116,10 @@ export default function Home({ dataPresta }) {
             </main>
         </div>
     )
+}
+
+export async function getStaticProps() {
+    return {
+        props: { dataPresta },
+    }
 }
