@@ -38,7 +38,23 @@ export default function Contact() {
 
             <main className={styles.main}>
                 <h1>CONTACT</h1>
-                <form className={styles.formulaire}>
+                <div className={styles.temporaryDiv}>
+                    <p>
+                        Ecrivez moi à{' '}
+                        <a
+                            className={styles.link}
+                            href="mailto:marco.sch4064@gmail.com"
+                        >
+                            marco.sch4064@gmail.com
+                        </a>{' '}
+                        je me ferais un plaisir de vous répondre.
+                    </p>
+                    <p>
+                        Soyez le plus précis possible dans votre description
+                        pour faciliter nos futurs échanges.
+                    </p>
+                </div>
+                {/* <form className={styles.formulaire}>
                     <div className={styles.input}>
                         <label htmlFor="name">Nom</label>
                         <input type="text" name="name" required />
@@ -69,7 +85,7 @@ export default function Contact() {
                         alt="msw web developper"
                         style={{ margin: 10 }}
                     />
-                </form>
+                </form> */}
             </main>
         </div>
     )
