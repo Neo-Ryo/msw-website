@@ -4,7 +4,7 @@ const prestaData = [
         icon: '/presta/responsive.png',
         descriptionIcon: 'graphique cube',
         text:
-            'Fonctionnalité, positionnement et stratégie pour votre prochain site.',
+            'Fonctionnalités, positionnement et stratégie pour votre prochain site web.',
     },
     {
         icon: '/presta/concept.png',

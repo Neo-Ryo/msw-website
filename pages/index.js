@@ -68,7 +68,7 @@ export default function Home({ dataPresta }) {
                 <div className={styles.prestaWrapper}>
                     <div className={styles.prestaTitles}>
                         <h2>MES SERVICES</h2>
-                        <p>Des prestation adaptées à vos besoin</p>
+                        <p>Des prestations adaptées à vos besoins</p>
                     </div>
                     <div className={styles.presta}>
                         {dataPresta.map((presta, i) => (
