@@ -46,3 +46,13 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        width: 150px;
+        height: 200px;
+    }
+    .wrapper p {
+        font-size: 14px;
+    }
+}
